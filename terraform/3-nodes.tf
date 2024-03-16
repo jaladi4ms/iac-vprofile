@@ -40,7 +40,7 @@ resource "aws_eks_node_group" "private-nodes" {
   ]
 
   capacity_type  = "SPOT"
-  ami_type = "AL2_x86_64"
+  ami_type       = "AL2_x86_64"
   instance_types = ["t3.small"]
 
   scaling_config {
