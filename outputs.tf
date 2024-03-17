@@ -1,6 +1,6 @@
 output "cluster_name" {
   description = "Amazon Web Service EKS Cluster Name"
-  value       = module.eks.cluster_name
+  value       = toset(data.aws_eks_clusters.example.names)
 }
 
 output "cluster_endpoint" {
