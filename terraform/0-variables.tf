@@ -10,6 +10,12 @@ variable "clusterName" {
   default     = "vprofile-eks"
 }
 
+
+variable "project_name" {
+  type    = string
+  default = "vprofile"
+}
+
 variable "ZONE1" {
   default = "us-east-2a"
 }
