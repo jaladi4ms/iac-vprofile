@@ -37,5 +37,12 @@ resource "aws_eks_cluster" "demo" {
     ]
   }
 
-  depends_on = [aws_iam_role_policy_attachment.demo-AmazonEKSClusterPolicy]
+  depends_on = [aws_iam_role_policy_attachment.demo-AmazonEKSClusterPolicy,
+  aws_route_table_association.NAT-Gate-rta3,
+  aws_route_table_association.NAT-Gate-rta2,
+  aws_route_table_association.NAT-Gate-rta1,
+  aws_route_table_association.rta1,
+  aws_route_table_association.rta2,
+  aws_route_table_association.rta3]
+
 }
